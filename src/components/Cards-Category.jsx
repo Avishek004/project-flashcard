@@ -33,7 +33,7 @@ const CardsCategory = () => {
     return false;
   });
 
-  console.log(uniqueCategories, uniqueIds);
+  // console.log(uniqueCategories, uniqueIds);
 
   return (
     <div className="flex flex-row gap-3">
