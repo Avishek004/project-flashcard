@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { allCards } from "../lib/api/flashcard";
 
 const CardsCategory = () => {
-  const { category } = useParams();
+  const navigate = useNavigate();
   const [categories, setCategories] = useState();
-  //   const [category, setCategory] = useState();
 
-  const getCardsCategory = () => {
+  const getCategoryOfCards = () => {
     allCards()
       .then((res) => {
         console.log(res.data.data);
@@ -19,7 +18,7 @@ const CardsCategory = () => {
   };
 
   useEffect(() => {
-    getCardsCategory();
+    getCategoryOfCards();
   }, []);
   const uniqueIds = [];
 
@@ -39,7 +38,11 @@ const CardsCategory = () => {
     <div className="flex flex-row gap-3">
       {uniqueIds &&
         uniqueIds.map((uniqueId, index) => (
-          <div className="font-poppins text-2xl not-italic border-2 rounded-md border-dotted p-2" key={index}>
+          <div
+            onClick={() => navigate(`/${uniqueId}`)}
+            className="font-poppins text-2xl not-italic border-2 rounded-md border-dotted p-2"
+            key={index}
+          >
             {uniqueId}
           </div>
         ))}
