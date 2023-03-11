@@ -26,7 +26,7 @@ const CardsByCategory = () => {
 
   return (
     <div className="flex flex-col gap-4 px-30 py-10">
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row items-center justify-center gap-3">
         <Link to="/" className="font-poppins text-2xl not-italic border-2 rounded-md border-dotted p-2">
           All
         </Link>
