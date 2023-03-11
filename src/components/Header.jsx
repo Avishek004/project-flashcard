@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="bg-white py-4">
+    <div className="bg-white py-4 shadow-lg">
       <p className="font-poppins text-2xl not-italic font-semibold tracking-wide text-center text-black">Flash Card</p>
     </div>
   );

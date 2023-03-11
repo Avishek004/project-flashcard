@@ -9,7 +9,7 @@ const CardsCategory = () => {
   const getCategoryOfCards = () => {
     allCards()
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setCategories(res.data.data);
       })
       .catch((err) => {
@@ -20,6 +20,7 @@ const CardsCategory = () => {
   useEffect(() => {
     getCategoryOfCards();
   }, []);
+
   const uniqueIds = [];
 
   const uniqueCategories = categories?.filter((element) => {

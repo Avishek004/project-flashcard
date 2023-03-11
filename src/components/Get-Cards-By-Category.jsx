@@ -12,7 +12,7 @@ const CardsByCategory = () => {
   const cardsByCategory = () => {
     getCardsByCategory(category)
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setCards(res.data.data);
       })
       .catch((err) => {
@@ -25,7 +25,7 @@ const CardsByCategory = () => {
   }, [category]);
 
   return (
-    <div className="flex flex-col gap-4 px-30">
+    <div className="flex flex-col gap-4 px-30 py-10">
       <div className="flex flex-row gap-3">
         <Link to="/" className="font-poppins text-2xl not-italic border-2 rounded-md border-dotted p-2">
           All
