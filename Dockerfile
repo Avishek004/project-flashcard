@@ -1,5 +1,5 @@
 FROM node:14.18.3-alpine as build
-WORKDIR /app
+WORKDIR '/app'
 COPY package.json package-lock.json ./
 RUN npm install
 COPY nginx.conf ./
